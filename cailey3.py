@@ -45,8 +45,7 @@ with right_column:
 
 #Creating Input Country Dropdown
 country = 'Armenia'
-country = st.selectbox
-('In what country are you are you located?', 
+country = st.selectbox ('In what country are you are you located?',
  ('Armenia',
          'Bolivia',
          'Cambodia',
