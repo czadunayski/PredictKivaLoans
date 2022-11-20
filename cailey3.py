@@ -251,7 +251,7 @@ elif country == 'Zimbabwe':
     currency = 'ZWL'
 
 #creating Input Monthly Payment Slider
-input_payment = st.slider('How much can you afford per month (USD)', 1.25, (rate*max(kiva_loans["repayment_per_mo"])), 1.0)
+input_payment = st.slider('How much can you afford per month (in your local currency)', 1.25, (rate*max(kiva_loans["repayment_per_mo"])), 1.0)
 
 #creating Prediction (button)
 if st.button('Make Prediction'):
