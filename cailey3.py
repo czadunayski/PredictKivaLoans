@@ -263,7 +263,7 @@ if st.button('Make Prediction'):
         [int(input_sector), int(input_gender), input_payment, input_income], 0)
     prediction = model.predict(inputs)
     print("final pred", np.squeeze(prediction, -1))
-    st.write(f"Your recomended loan amount to request is: {rate*(np.squeeze(prediction, -1)):.2f}{currency} or ${(np.squeeze(prediction, -1)):.2f}USD")
+    st.write(f"Your recomended loan amount to request is: {rate*(np.squeeze(prediction, -1)):.2f} {currency} or ${(np.squeeze(prediction, -1)):.2f}USD")
 
     st.write(f"Thank you {st.session_state.name}! Please run again if you're curious to see the results for other loan details")
     
