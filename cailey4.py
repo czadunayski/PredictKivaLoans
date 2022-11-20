@@ -269,4 +269,4 @@ if st.button('Make Prediction'):
     st.write(f"Thank you {st.session_state.name}! Please run again if you're curious to see the results for other loan details")
     
     
-    hist(kiva_loans[kiva_loans.sector==input_sector].funded_amount.values, bins=50, range=(0,200))
+    hist(kiva_loans[kiva_loans.sector==input_sector].funded_amount.values)
