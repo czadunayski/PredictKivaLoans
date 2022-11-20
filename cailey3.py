@@ -267,5 +267,5 @@ if st.button('Make Prediction'):
     print("final pred", np.squeeze(prediction, -1))
     st.write(f"Your recomended loan amount to request is: ${rate*(np.squeeze(prediction, -1)):.2f}{currency}")
 
-    st.write("Thank you {st.session_state.name}! Please run again if you're curious to see the results for other loan details")
+    st.write(f"Thank you {st.session_state.name}! Please run again if you're curious to see the results for other loan details")
     
