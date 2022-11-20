@@ -28,8 +28,6 @@ model = joblib.load("rfmodel.pkl")
 if st.checkbox('Show Training Dataframe'):
     kiva_loans
 
-st.subheader("Please select relevant features of the loan you are looking for")
-
 ##start
 st.subheader("Please select the appropriate loan details to receive a predicated loan amount")
 left_column, right_column = st.columns(2)
