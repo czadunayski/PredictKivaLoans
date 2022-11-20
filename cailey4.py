@@ -268,3 +268,22 @@ if st.button('Make Prediction'):
 
     st.write(f"Thank you {st.session_state.name}! Please run again if you're curious to see the results for other loan details")
     
+
+
+#histogram
+#st.bar_chart(data=kiva_loans, *, x=None, y=None, width=0, height=0, use_container_width=True)
+#import pandas as pd
+#import numpy as np
+
+#chart_data = pd.DataFrame(
+ #   np.random.randn(20, 3),
+  #  columns=["a", "b", "c"])
+
+#st.bar_chart(chart_data)
+
+
+#histogrambeforestart
+
+#np.unique(kiva_loans['sector'])
+
+kiva_loans_filtered = kiva_loans[(kiva_loans.sector == input_sector) & (kiva_loans.income == input_income)]
