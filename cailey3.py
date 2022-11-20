@@ -86,6 +86,8 @@ country = (
         'Zimbabwe'
         )
 
+country = st.selectbox("Select your Country", country)
+
 #coding inputted Country to Income Index
 index=500
 rate=1
