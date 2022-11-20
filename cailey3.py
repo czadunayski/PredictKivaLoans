@@ -251,9 +251,13 @@ elif country == 'Zimbabwe':
     currency = 'ZWL'
 
 #creating Input Monthly Payment Slider
-input_payment = st.slider('How much can you afford per month (in your local currency)', 1.25, (rate*max(kiva_loans["repayment_per_mo"])), 1.0)
+monthpay = st.slider('How much can you afford per month (in your local currency)', 1.25, (rate*max(kiva_loans["repayment_per_mo"])), 1.0)
 
 #creating Prediction (button)
+
+input_payment = monthpay/rate
+input_income = index
+
 if st.button('Make Prediction'):
     input_sector = label_encoder_sector.transform(np.expand_dims(inpu_sector, -1))
     input_gender = label_encoder_gender.transform(np.expand_dims(inpu_gender, -1))
