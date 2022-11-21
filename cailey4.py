@@ -274,17 +274,17 @@ if st.button('Make Prediction'):
 
 kiva_df = pd.DataFrame(kiva_loans)
 
+kiva_df2 = kive_df[(kiva_df['sector'] == input_sector) & (kiva_df['income_index'] == input_income)]
 
 #histogram
 
-hist_fig = plt.figure(figsize=(8,7))
+#hist_fig = plt.figure(figsize=(8,7))
 
-hist_ax = hist_fig.add_subplot(111)
+#hist_ax = hist_fig.add_subplot(111)
 
-kiva_df2 = kiva_df[["amount_funded"]]
+#kiva_df2 = kiva_df[["amount_funded"]]
 
-kiva_df2.plot.hist(bins=50, alpha=0.7, ax=hist_ax, title="Average Measurements per Tumor Type");
-
+#kiva_df2.plot.hist(bins=50, alpha=0.7, ax=hist_ax, title="Average Measurements per Tumor Type");
 
 #st.bar_chart(kiva_df[‘amount_funded’])
 
