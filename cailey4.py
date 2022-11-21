@@ -271,8 +271,7 @@ if st.button('Make Prediction'):
 
     st.write(f"Thank you {st.session_state.name}! Please run again if you're curious to see the results for other loan details")
     
-    
-    hist(kiva_loans[kiva_loans.sector==input_sector].funded_amount.values)
+ 
 
 #histogram
 #df = pd.DataFrame(weekly_data[:200], columns = [‘num_orders’,’checkout_price’,’base_price’])
