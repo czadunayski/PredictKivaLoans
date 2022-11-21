@@ -280,7 +280,7 @@ if st.button('Make Prediction'):
 #plt.show()
 #st.pyplot()
 
-hist_data = [kiva_loans[‘amount_funded’]]
-group_labels = [‘Loan Amount (USD)’]
-fig = ff.create_distplot(hist_data, group_labels, bin_size=[10, 25])
-st.plotly_chart(fig, use_container_width=True)
+st.subheader(‘Weekly Demand Data’)
+st.write(kiva_loans)
+#Bar Chart
+st.bar_chart(kiva_loans[‘funded_amount’])
