@@ -11,6 +11,9 @@ from sklearn.preprocessing import  LabelEncoder
 from sklearn.ensemble import RandomForestRegressor
 import pickle
 import numpy as np
+import plotly.figure_factory as ff
+import matplotlib.pyplot as plt
+
 st.header("Kiva Loans Prediction App")
 st.text_input("Enter your Name: ", key="name")
 kiva_loans = pd.read_csv("https://raw.githubusercontent.com/kristophernerl/PredictKivaLoans/main/kiva_loans2.csv")
@@ -270,3 +273,14 @@ if st.button('Make Prediction'):
     
     
     hist(kiva_loans[kiva_loans.sector==input_sector].funded_amount.values)
+
+#histogram
+#df = pd.DataFrame(weekly_data[:200], columns = [‘num_orders’,’checkout_price’,’base_price’])
+#df.hist()
+#plt.show()
+#st.pyplot()
+
+hist_data = [kiva_loans[‘amount_funded’]]
+group_labels = [‘Loan Amount (USD)’]
+fig = ff.create_distplot(hist_data, group_labels, bin_size=[10, 25])
+st.plotly_chart(fig, use_container_width=True)
