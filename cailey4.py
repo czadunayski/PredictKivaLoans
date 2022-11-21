@@ -272,6 +272,5 @@ if st.button('Make Prediction'):
     st.write(f"Thank you {st.session_state.name}! Please run again if you're curious to see the results for other loan details")
     
 
-kiva_df = pd.DataFrame("https://raw.githubusercontent.com/kristophernerl/PredictKivaLoans/main/kiva_loans2.csv")
-
+kiva_df = pd.DataFrame(kiva_loans)
 st.bar_chart(kiva_df)
