@@ -276,7 +276,4 @@ kiva_df = pd.DataFrame(kiva_loans)
 
 
 #histogram
-df = pd.DataFrame(kiva_df[:200], columns = [amount_funded])
-df.hist()
-plt.show()
-st.pyplot()
+st.bar_chart(kiva_df[‘amount_funded’])
