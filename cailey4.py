@@ -272,14 +272,3 @@ if st.button('Make Prediction'):
     st.write(f"Thank you {st.session_state.name}! Please run again if you're curious to see the results for other loan details")
     
  
-
-#histogram
-#df = pd.DataFrame(weekly_data[:200], columns = [‘num_orders’,’checkout_price’,’base_price’])
-#df.hist()
-#plt.show()
-#st.pyplot()
-
-st.subheader(‘Weekly Demand Data’)
-st.write(kiva_loans)
-#Bar Chart
-st.bar_chart(kiva_loans[‘funded_amount’])
