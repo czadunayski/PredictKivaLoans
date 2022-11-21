@@ -276,7 +276,7 @@ kiva_df = pd.DataFrame(kiva_loans)
 
 
 #histogram
-df = pd.DataFrame(kiva_df[:200], columns = [‘amount_funded’])
+df = pd.DataFrame(kiva_df[:200], columns = [amount_funded])
 df.hist()
 plt.show()
 st.pyplot()
