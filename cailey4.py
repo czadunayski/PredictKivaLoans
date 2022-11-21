@@ -273,4 +273,3 @@ if st.button('Make Prediction'):
     
 
 kiva_df = pd.DataFrame(kiva_loans)
-st.bar_chart(kiva_df)
